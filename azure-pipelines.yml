@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: Self-Hosted
+pool: Self-hosted
   # vmImage: ubuntu-latest
 
 steps:
@@ -14,7 +14,9 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
+    # javaHomeOption: 'JDKVersion'
+    javaHomeOption: 'path'
+    jdkDirectory: 'C:\Users\nttam2\.jdks\temurin-17.0.13'
     # jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
